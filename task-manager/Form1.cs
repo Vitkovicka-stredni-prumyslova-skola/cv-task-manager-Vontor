@@ -62,7 +62,11 @@ namespace task_manager
 
                 if(foundTask != null)//task existuje
                 {
+                    Task new_task_object = new Task(gui_task_name.Text, gui_task_content.Text, false);
 
+                    tasks.Add(new_task_object);
+
+                    tasks.Remove(foundTask);
                 }
                 else//task neexistuje
                 {
@@ -72,7 +76,7 @@ namespace task_manager
                 }
                 /*gui_task_name.Text;
                 gui_task_conent.Text;*/
-                gui_check.Checked = false;
+                /*gui_check.Checked = false;*/
             }
             
         }
