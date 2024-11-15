@@ -38,11 +38,13 @@
             this.task_list = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.task_check = new System.Windows.Forms.CheckBox();
+            this.task_delete = new System.Windows.Forms.Button();
+            this.task_add = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // task_save
             // 
-            this.task_save.Location = new System.Drawing.Point(11, 412);
+            this.task_save.Location = new System.Drawing.Point(11, 410);
             this.task_save.Name = "task_save";
             this.task_save.Size = new System.Drawing.Size(75, 23);
             this.task_save.TabIndex = 0;
@@ -63,7 +65,7 @@
             // gui_task_name
             // 
             this.gui_task_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.gui_task_name.Location = new System.Drawing.Point(11, 41);
+            this.gui_task_name.Location = new System.Drawing.Point(11, 54);
             this.gui_task_name.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.gui_task_name.Name = "gui_task_name";
             this.gui_task_name.Size = new System.Drawing.Size(288, 30);
@@ -84,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(7, 9);
+            this.label2.Location = new System.Drawing.Point(6, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 29);
             this.label2.TabIndex = 5;
@@ -119,7 +121,7 @@
             // task_check
             // 
             this.task_check.AutoSize = true;
-            this.task_check.Location = new System.Drawing.Point(108, 416);
+            this.task_check.Location = new System.Drawing.Point(121, 414);
             this.task_check.Name = "task_check";
             this.task_check.Size = new System.Drawing.Size(63, 17);
             this.task_check.TabIndex = 9;
@@ -127,11 +129,33 @@
             this.task_check.UseVisualStyleBackColor = true;
             this.task_check.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // task_delete
+            // 
+            this.task_delete.Location = new System.Drawing.Point(224, 410);
+            this.task_delete.Name = "task_delete";
+            this.task_delete.Size = new System.Drawing.Size(75, 23);
+            this.task_delete.TabIndex = 10;
+            this.task_delete.Text = "Smazat";
+            this.task_delete.UseVisualStyleBackColor = true;
+            this.task_delete.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // task_add
+            // 
+            this.task_add.Location = new System.Drawing.Point(487, 12);
+            this.task_add.Name = "task_add";
+            this.task_add.Size = new System.Drawing.Size(75, 23);
+            this.task_add.TabIndex = 11;
+            this.task_add.Text = "Přidat";
+            this.task_add.UseVisualStyleBackColor = true;
+            this.task_add.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 450);
+            this.Controls.Add(this.task_add);
+            this.Controls.Add(this.task_delete);
             this.Controls.Add(this.task_check);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.task_list);
@@ -159,6 +183,8 @@
         private System.Windows.Forms.CheckedListBox task_list;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox task_check;
+        private System.Windows.Forms.Button task_delete;
+        private System.Windows.Forms.Button task_add;
     }
 }
 
